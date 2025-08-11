@@ -38,8 +38,8 @@ export default function HowItWorks() {
   const current = STEPS.find((s) => s.id === active);
 
   return (
-    <section className="bg-black text-white">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+    <section id="howitworks" className="bg-black text-white py-16">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 ">
         {/* Header */}
         <div className="mb-10">
           <p className="text-sm text-gray-400 mb-2">Simple 3-step flow</p>
@@ -112,7 +112,7 @@ export default function HowItWorks() {
               <p className="text-white leading-relaxed">{current.body}</p>
 
               {/* mini bullets for a bit more detail */}
-              <ul className="mt-5 space-y-2 text-sm text-white">
+              {/* <ul className="mt-5 space-y-2 text-sm text-white">
                 {active === 1 && (
                   <>
                     <li className="whitespace-nowrap font-semibold">
@@ -139,15 +139,15 @@ export default function HowItWorks() {
                       </li>
                     </ul>
                   </>
-                )}
+                )} */}
 
-                {/* {active === 2 && (
+              {/* {active === 2 && (
                   <>
                     <li>• Follow tasks, explore features, and record notes</li>
                     <li>• Report bugs with steps, screenshots, and severity</li>
                   </>
                 )} */}
-                {active === 3 && (
+              {/* {active === 3 && (
                   <>
                     <li className="whitespace-nowrap font-semibold">
                       Builders
@@ -175,7 +175,7 @@ export default function HowItWorks() {
                     </ul>
                   </>
                 )}
-              </ul>
+              </ul> */}
 
               <div className="mt-6">
                 <a
@@ -183,7 +183,7 @@ export default function HowItWorks() {
                   className="inline-block rounded-lg px-5 py-3 font-medium text-white"
                   style={{ background: PRIMARY }}
                 >
-                  Get started — it’s free
+                  Get started
                 </a>
               </div>
             </div>

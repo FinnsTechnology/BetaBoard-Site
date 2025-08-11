@@ -1,7 +1,8 @@
+import DiscoverPhone from "../assets/DiscoverPhone.png";
 export default function FirstDetail() {
   return (
-    <section className="bg-white">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+    <section className="bg-white xl:pt-24 pt-16 pb-16">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           {/* Left content */}
           <div className="text-center lg:text-left">
@@ -30,9 +31,11 @@ export default function FirstDetail() {
 
           {/* Right content (placeholder phone) */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-64 h-128 bg-gray-200 rounded-3xl flex items-center justify-center shadow-lg">
-              <span className="text-gray-500">[Phone Placeholder]</span>
-            </div>
+            <img
+              src={DiscoverPhone}
+              alt="Discover screen preview"
+              className="w-96 h-auto"
+            />
           </div>
         </div>
       </div>

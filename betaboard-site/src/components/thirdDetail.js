@@ -1,3 +1,4 @@
+import FeedbackPhone from "../assets/FeedbackPhone.png";
 export default function ThirdDetail() {
   return (
     <section className="bg-white">
@@ -27,9 +28,11 @@ export default function ThirdDetail() {
 
           {/* Right content (placeholder phone) */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-64 h-128 bg-gray-200 rounded-3xl flex items-center justify-center shadow-lg">
-              <span className="text-gray-500">[Phone Placeholder]</span>
-            </div>
+            <img
+              src={FeedbackPhone}
+              alt="Discover screen preview"
+              className="w-96 h-auto"
+            />
           </div>
         </div>
       </div>

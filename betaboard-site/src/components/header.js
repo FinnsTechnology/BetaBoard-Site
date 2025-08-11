@@ -9,15 +9,15 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm fixed w-full z-50">
+    <header className="bg-white shadow-sm fixed w-full z-50 pt-5 pb-5">
       {/* Main Header */}
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6">
         {/* Logo -> home */}
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center">
           <img
             src={BetaBoardLogo}
             alt="BetaBoard Logo"
-            className="h-20 w-auto sm:h-24 -ml-5"
+            className="h-10 sm:h-12 md:h-14 w-auto "
           />
         </Link>
 

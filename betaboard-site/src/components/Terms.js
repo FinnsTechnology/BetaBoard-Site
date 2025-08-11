@@ -41,9 +41,11 @@ export default function Terms() {
           items={[
             "Payments to testers are processed via Stripe. You must provide accurate payout information to receive funds.",
             "Builders are responsible for funding rewards before starting a beta test.",
+            "By creating a beta test, builders agree to pay the stated reward amount per tester, the applicable Stripe payment processing fee, and a 20% platform transaction fee to BetaBoard.",
             "We are not responsible for payment failures caused by incorrect information or third-party issues.",
           ]}
         />
+
         <TermsSection
           num="4"
           title="Prohibited uses"

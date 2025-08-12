@@ -9,11 +9,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-8">
           {/* Left: Logo + tagline */}
           <div className="flex items-start ">
-            <Link to="/">
+            <Link
+              to="/"
+              className="flex items-center"
+              style={{ height: 46, overflow: "hidden" }}
+            >
               <img
                 src={BetaBoardLogo}
                 alt="BetaBoard Logo"
-                className="h-9 sm:h-10 w-auto mt-0.5"
+                style={{
+                  height: 60, // bigger than container
+                  width: "auto",
+                  transform: "translateX(-15px)",
+                }}
               />
             </Link>
           </div>

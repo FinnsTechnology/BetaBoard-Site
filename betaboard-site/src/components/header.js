@@ -13,11 +13,19 @@ export default function Header() {
       {/* Main Header */}
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6">
         {/* Logo -> home */}
-        <Link to="/" className="flex items-center">
+        <Link
+          to="/"
+          className="flex items-center"
+          style={{ height: 46, overflow: "hidden" }}
+        >
           <img
             src={BetaBoardLogo}
             alt="BetaBoard Logo"
-            className="h-10 sm:h-12 md:h-14 w-auto "
+            style={{
+              height: 60, // bigger than container
+              width: "auto",
+              transform: "translateX(-13px)",
+            }}
           />
         </Link>
 

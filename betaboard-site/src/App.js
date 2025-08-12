@@ -18,6 +18,9 @@ import Footer from "./components/Footer";
 import Guidelines from "./components/guidelines";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Terms from "./components/Terms";
+import CardSuccess from "./components/CardSuccess";
+import BankSuccess from "./components/BankSuccess";
+
 // (optional) create these pages; you can stub them for now
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
 // import TermsOfService from "./pages/TermsOfService";
@@ -67,16 +70,21 @@ function Placeholder({ title }) {
 export default function App() {
   return (
     <Router>
-      <Header />
-      <ScrollToHash />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/community-guidelines" element={<Guidelines />} />
-
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-of-service" element={<Terms />} />
-      </Routes>
-      <Footer />
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          <ScrollToHash />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/community-guidelines" element={<Guidelines />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<Terms />} />
+            <Route path="/success/card" element={<CardSuccess />} />
+            <Route path="/success/bank" element={<BankSuccess />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }

@@ -4,7 +4,7 @@ import BetaBoardLogo from "../assets/BetaBoardWhite.png";
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-14">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Top row */}
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-8">
           {/* Left: Logo + tagline */}
@@ -20,7 +20,7 @@ export default function Footer() {
                 style={{
                   height: 60, // bigger than container
                   width: "auto",
-                  transform: "translateX(-10px)",
+                  transform: "translateX(-13px)",
                 }}
               />
             </Link>

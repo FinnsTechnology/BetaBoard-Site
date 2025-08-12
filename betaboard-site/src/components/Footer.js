@@ -20,7 +20,7 @@ export default function Footer() {
                 style={{
                   height: 60, // bigger than container
                   width: "auto",
-                  transform: "translateX(-15px)",
+                  transform: "translateX(-10px)",
                 }}
               />
             </Link>

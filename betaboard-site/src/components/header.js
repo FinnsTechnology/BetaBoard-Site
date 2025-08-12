@@ -24,7 +24,7 @@ export default function Header() {
             style={{
               height: 60, // bigger than container
               width: "auto",
-              transform: "translateX(-13px)",
+              transform: "translateX(-10px)",
             }}
           />
         </Link>

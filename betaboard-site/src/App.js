@@ -20,6 +20,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import Terms from "./components/Terms";
 import CardSuccess from "./components/CardSuccess";
 import BankSuccess from "./components/BankSuccess";
+import SubscriptionSuccess from "./components/SubscriptionSuccess";
 
 // (optional) create these pages; you can stub them for now
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -81,6 +82,7 @@ export default function App() {
             <Route path="/terms-of-service" element={<Terms />} />
             <Route path="/success/card" element={<CardSuccess />} />
             <Route path="/success/bank" element={<BankSuccess />} />
+            <Route path="/success/sub" element={<SubscriptionSuccess />} />
           </Routes>
         </main>
         <Footer />

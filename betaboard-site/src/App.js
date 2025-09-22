@@ -21,6 +21,10 @@ import Terms from "./components/Terms";
 import CardSuccess from "./components/CardSuccess";
 import BankSuccess from "./components/BankSuccess";
 import SubscriptionSuccess from "./components/SubscriptionSuccess";
+import TopBanner from "./components/TopBanner";
+import ResultsSection from "./components/ResultsSection";
+import RoleInfoPanel from "./components/RoleInfoPanel";
+import DiscordCTA from "./components/DiscordCTA";
 
 // (optional) create these pages; you can stub them for now
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -43,28 +47,14 @@ function Home() {
   return (
     <>
       {/* content */}
-      <div className="py-16">
-        <FirstDetail />
-        <SecondDetail />
-        <ThirdDetail />
+      <div className="pt-16">
+        <TopBanner />
       </div>
-      <HowItWorks />
+      <ResultsSection />
+      <RoleInfoPanel />
+      <DiscordCTA />
       <FAQ />
     </>
-  );
-}
-
-function Placeholder({ title }) {
-  return (
-    <div className="max-w-4xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold mb-4">{title}</h1>
-      <p className="text-gray-600">
-        Replace this with your full {title} content.{" "}
-        <Link to="/#howitworks" className="underline">
-          Back to Home
-        </Link>
-      </p>
-    </div>
   );
 }
 
@@ -73,18 +63,16 @@ export default function App() {
     <Router>
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1">
-          <ScrollToHash />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/community-guidelines" element={<Guidelines />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<Terms />} />
-            <Route path="/success/card" element={<CardSuccess />} />
-            <Route path="/success/bank" element={<BankSuccess />} />
-            <Route path="/success/sub" element={<SubscriptionSuccess />} />
-          </Routes>
-        </main>
+        <ScrollToHash />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/community-guidelines" element={<Guidelines />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<Terms />} />
+          <Route path="/success/card" element={<CardSuccess />} />
+          <Route path="/success/bank" element={<BankSuccess />} />
+          <Route path="/success/sub" element={<SubscriptionSuccess />} />
+        </Routes>
         <Footer />
       </div>
     </Router>

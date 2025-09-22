@@ -3,13 +3,16 @@ import { Link } from "react-router-dom"; // ⬅ add this
 import { COLORS } from "../constants/Constants";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
-import BetaBoardLogo from "../assets/BetaBoard.png";
+import BetaBoardLogoWhite from "../assets/BetaBoardWhite.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm fixed w-full z-50 pt-5 pb-5">
+    <header
+      className="shadow-sm fixed w-full z-50 pt-5 pb-5"
+      style={{ backgroundColor: "#0A0A0A" }}
+    >
       {/* Main Header */}
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6">
         {/* Logo -> home */}
@@ -19,7 +22,7 @@ export default function Header() {
           style={{ height: 46, overflow: "hidden" }}
         >
           <img
-            src={BetaBoardLogo}
+            src={BetaBoardLogoWhite}
             alt="BetaBoard Logo"
             style={{
               height: 60, // bigger than container
@@ -33,19 +36,16 @@ export default function Header() {
         <div className="hidden sm:flex items-center gap-6">
           <Link
             to="/#howitworks"
-            className="text-gray-700 hover:text-black font-medium"
+            className="text-white hover:text-black font-medium"
           >
             How it Works
           </Link>
-          <Link
-            to="/#faq"
-            className="text-gray-700 hover:text-black font-medium"
-          >
+          <Link to="/#faq" className="text-white hover:text-black font-medium">
             FAQ
           </Link>
           <a
             href="mailto:support@thebetaboard.com"
-            className="text-gray-700 hover:text-black font-medium"
+            className="text-white hover:text-black font-medium"
           >
             Contact
           </a>
@@ -59,9 +59,12 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button onClick={() => setMenuOpen(!menuOpen)} className="sm:hidden">
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="sm:hidden text-white"
+        >
           {menuOpen ? (
-            <XMarkIcon className="h-6 w-6" />
+            <XMarkIcon className="h-6 w-6 " />
           ) : (
             <Bars3Icon className="h-6 w-6" />
           )}

@@ -13,7 +13,6 @@ const FAQS = [
     q: "Do builders need a payment method?",
     a: "Yes. Builders must add a card on file through our secure Stripe integration before launching a beta. This allows tester rewards to be held in escrow and paid out cleanly once feedback is submitted. If you don’t receive the number of testers you planned for by the end of the feedback window, the unused funds will be automatically returned to your card.",
   },
-
   {
     q: "Do I need to download TestFlight?",
     a: "Yes. TestFlight is Apple’s official beta testing app, and it’s required to install iOS beta builds from builders on our platform. You can download it for free from the App Store. Once you join a beta, you’ll receive a TestFlight invite link that lets you install the build directly.",
@@ -22,7 +21,6 @@ const FAQS = [
     q: "What kind of feedback should I submit?",
     a: "Provide clear, structured feedback with specific steps to reproduce any issues you find, along with a rating of your overall experience. Suggestions for improvements, feature ideas, and notes on the user experience are also highly valued.",
   },
-
   {
     q: "When are payouts processed?",
     a: "After the feedback window closes for a test run, any earned payouts are added to your in-app balance. Once your balance reaches $50 or more, you can request a withdrawal, and the funds will be sent directly to your linked bank account.",
@@ -31,23 +29,22 @@ const FAQS = [
 
 export default function FAQ() {
   const [open, setOpen] = useState(0);
-
   const toggle = (idx) => setOpen((o) => (o === idx ? -1 : idx));
 
   return (
-    <section id="faq" className="bg-gray-100 text-black py-16">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 ">
+    <section id="faq" className="bg-[#0A0A0A] text-white py-16 md:py-20">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-sm text-gray-500 mb-2">Common questions</p>
-          <h2 className="text-3xl sm:text-4xl font-bold">
+          <p className="text-sm text-gray-400 mb-2">Common questions</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold">
             Frequently Asked{" "}
-            <span style={{ color: PRIMARY }} className="whitespace-nowrap">
+            <span className="bg-gradient-to-r from-[#9AE6B4] via-[#60A5FA] to-[#C084FC] bg-clip-text text-transparent whitespace-nowrap">
               Questions
             </span>
           </h2>
-          <p className="mt-3 text-gray-600">
-            Everything you need to know about Betas, payouts, and feedback.
+          <p className="mt-3 text-gray-300">
+            Everything you need to know about betas, payouts, and feedback.
           </p>
         </div>
 
@@ -58,14 +55,15 @@ export default function FAQ() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-white ring-1 ring-black/10 shadow-sm"
+                className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-[1px]"
               >
                 <button
                   onClick={() => toggle(idx)}
                   aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
+                  className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left 
+             focus:outline-none rounded-2xl"
                 >
-                  <span className="text-base sm:text-lg font-semibold">
+                  <span className="text-base sm:text-lg font-semibold text-white">
                     {item.q}
                   </span>
                   <ChevronDownIcon
@@ -76,7 +74,7 @@ export default function FAQ() {
                   />
                 </button>
 
-                {/* Animated panel: grid-rows trick for smooth height */}
+                {/* Animated panel (grid-rows trick) */}
                 <div
                   className={`grid transition-all duration-300 ease-in-out px-5 ${
                     isOpen
@@ -85,7 +83,7 @@ export default function FAQ() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-sm sm:text-base leading-relaxed text-gray-600">
+                    <p className="text-sm sm:text-base leading-relaxed text-gray-300">
                       {item.a}
                     </p>
                   </div>
@@ -93,6 +91,17 @@ export default function FAQ() {
               </div>
             );
           })}
+        </div>
+
+        {/* Help CTA */}
+        <div className="text-center mt-10">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium text-white transition hover:shadow"
+            style={{ background: PRIMARY }}
+          >
+            Still need help? Contact us
+          </a>
         </div>
       </div>
     </section>

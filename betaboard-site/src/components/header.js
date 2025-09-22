@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // ⬅ add this
+import { Link } from "react-router-dom";
 import { COLORS } from "../constants/Constants";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,7 +15,7 @@ export default function Header() {
     >
       {/* Main Header */}
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6">
-        {/* Logo -> home */}
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center"
@@ -25,7 +25,7 @@ export default function Header() {
             src={BetaBoardLogoWhite}
             alt="BetaBoard Logo"
             style={{
-              height: 60, // bigger than container
+              height: 60,
               width: "auto",
               transform: "translateX(-13px)",
             }}
@@ -35,23 +35,20 @@ export default function Header() {
         {/* Desktop Links */}
         <div className="hidden sm:flex items-center gap-6">
           <Link
-            to="/#howitworks"
-            className="text-white hover:text-black font-medium"
+            to="/#faq"
+            className="text-white hover:text-[#9AE6B4] font-medium"
           >
-            How it Works
-          </Link>
-          <Link to="/#faq" className="text-white hover:text-black font-medium">
             FAQ
           </Link>
           <a
             href="mailto:support@thebetaboard.com"
-            className="text-white hover:text-black font-medium"
+            className="text-white hover:text-[#9AE6B4] font-medium"
           >
             Contact
           </a>
           <Link
             to="/#download"
-            className="flex items-center justify-center px-4 py-2 rounded-lg font-medium text-white"
+            className="flex items-center justify-center px-4 py-2 rounded-lg font-medium text-white transition hover:opacity-90"
             style={{ backgroundColor: COLORS.primary }}
           >
             Download BetaBoard
@@ -64,7 +61,7 @@ export default function Header() {
           className="sm:hidden text-white"
         >
           {menuOpen ? (
-            <XMarkIcon className="h-6 w-6 " />
+            <XMarkIcon className="h-6 w-6" />
           ) : (
             <Bars3Icon className="h-6 w-6" />
           )}
@@ -79,25 +76,18 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.25 }}
-            className="sm:hidden bg-white shadow-md px-4 py-3 space-y-2 items-center text-center"
+            className="sm:hidden bg-[#0A0A0A] px-4 py-3 space-y-2 text-center"
           >
             <Link
-              to="/#howitworks"
-              className="block px-4 py-2 rounded-lg text-gray-700 hover:text-black font-medium"
-              onClick={() => setMenuOpen(false)}
-            >
-              How it Works
-            </Link>
-            <Link
               to="/#faq"
-              className="block px-4 py-2 rounded-lg text-gray-700 hover:text-black font-medium"
+              className="block px-4 py-2 rounded-lg text-white hover:text-[#9AE6B4] font-medium"
               onClick={() => setMenuOpen(false)}
             >
               FAQ
             </Link>
             <a
               href="mailto:support@thebetaboard.com"
-              className="block px-4 py-2 rounded-lg text-gray-700 hover:text-black font-medium"
+              className="block px-4 py-2 rounded-lg text-white hover:text-[#9AE6B4] font-medium"
               onClick={() => setMenuOpen(false)}
             >
               Contact

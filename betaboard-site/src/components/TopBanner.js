@@ -5,7 +5,7 @@ export default function TopBanner() {
     <section className="relative overflow-hidden bg-[#0A0A0A] text-white">
       {/* animated background: only stars */}
       <div className="pointer-events-none absolute inset-0">
-        {/* ⭐ Twinkling stars (independent delays/durations/positions) */}
+        {/* ⭐ Twinkling stars */}
         <span
           className="star sm top-[8%] left-[12%]"
           style={{ "--d": "2.6s", "--delay": "0.2s" }}
@@ -91,7 +91,7 @@ export default function TopBanner() {
           you can improve your app faster.
         </p>
 
-        {/* CTAs */}
+        {/* CTA */}
         <div className="mx-auto mb-6 flex w-full max-w-md flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href="#get-started"
@@ -102,29 +102,29 @@ export default function TopBanner() {
         </div>
 
         {/* tiny feature bullets */}
-        <ul className="mx-auto flex max-w-md items-center justify-center gap-8 text-sm text-gray-300">
+        {/* <ul className="mx-auto flex max-w-md items-center justify-center gap-8 text-sm text-gray-300">
           <li className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#DB4437]" />
+            <span className="h-2 w-2 rounded-full bg-[#DB4437] flex-shrink-0" />
             AI-generated feedback plans
           </li>
           <li className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#DB4437]" />
+            <span className="h-2 w-2 rounded-full bg-[#DB4437] flex-shrink-0" />
             AI-powered insights
           </li>
           <li className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#DB4437]" />
+            <span className="h-2 w-2 rounded-full bg-[#DB4437] flex-shrink-0" />
             Real users - Real Feedback
           </li>
-        </ul>
+        </ul> */}
       </div>
 
-      {/* local keyframes (self-contained) */}
+      {/* local keyframes */}
       <style>{`
         /* ============ STARS ONLY ============ */
         .star {
-          --d: 3s;            /* duration per-star */
-          --delay: 0s;        /* delay per-star */
-          --hue: 0;           /* glow hue */
+          --d: 3s;
+          --delay: 0s;
+          --hue: 0;
           position: absolute;
           width: 2px;
           height: 2px;
@@ -132,7 +132,7 @@ export default function TopBanner() {
           background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 60%);
           box-shadow:
             0 0 6px rgba(255,255,255,0.35),
-            0 0 14px hsla(var(--hue), 80%, 60%, 0.25); /* colored glow for lg stars */
+            0 0 14px hsla(var(--hue), 80%, 60%, 0.25);
           opacity: .7;
           animation: twinkle var(--d) ease-in-out infinite var(--delay);
           will-change: transform, opacity, filter;
@@ -143,7 +143,7 @@ export default function TopBanner() {
 
         @keyframes twinkle {
           0%, 100% { opacity: .25; transform: scale(0.8); filter: blur(0.4px); }
-          50%      { opacity: 1;    transform: scale(1.7); filter: blur(0);    }
+          50%      { opacity: 1;    transform: scale(1.7); filter: blur(0); }
         }
 
         @media (prefers-reduced-motion: reduce) {

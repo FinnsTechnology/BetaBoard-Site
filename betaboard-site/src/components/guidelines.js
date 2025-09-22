@@ -3,7 +3,10 @@ const PRIMARY = "#DB4437";
 
 export default function Guidelines() {
   return (
-    <section id="community-guidelines" className="bg-white text-gray-900 pt-16">
+    <section
+      id="community-guidelines"
+      className="bg-[#0A0A0A] text-white pt-16"
+    >
       <div className="max-w-4xl mx-auto px-6 lg:px-8 py-16">
         {/* Header */}
         <div className="mb-8">
@@ -11,10 +14,11 @@ export default function Guidelines() {
             BetaBoard{" "}
             <span style={{ color: PRIMARY }}>Community Guidelines</span>
           </h1>
-          <p className="mt-3 text-gray-600">
+          <p className="mt-3 text-gray-300">
             Our mission is to create a safe, respectful, and productive space
             where builders and testers collaborate to make better apps. By using
-            BetaBoard, you agree to the following.
+            BetaBoard — including our AI-powered feedback and analytics — you
+            agree to the following.
           </p>
         </div>
 
@@ -43,8 +47,8 @@ export default function Guidelines() {
             title="Privacy & confidentiality"
             items={[
               "Do not share others’ personal or project information without permission.",
-
               "Get consent before sharing any content outside the platform.",
+              "Feedback and analytics may be processed by our AI provider (OpenAI) solely to deliver BetaBoard features; do not submit confidential data you aren’t allowed to share.",
             ]}
           />
           <Guideline
@@ -93,13 +97,13 @@ export default function Guidelines() {
         </div>
 
         {/* Footer note + contact */}
-        <div className="mt-10 rounded-xl bg-gray-50 ring-1 ring-gray-200 p-5">
-          <p className="text-sm text-gray-700">
+        <div className="mt-10 rounded-xl bg-white/5 ring-1 ring-white/10 p-5">
+          <p className="text-sm text-gray-200">
             By using BetaBoard, you acknowledge that you have read, understood,
             and agree to these Community Guidelines. Questions or concerns?{" "}
             <a
               href="mailto:support@thebetaboard.com"
-              className="underline font-medium"
+              className="underline font-medium hover:text-white"
               style={{ color: PRIMARY }}
             >
               support@thebetaboard.com
@@ -114,7 +118,7 @@ export default function Guidelines() {
 
 function Guideline({ num, title, items }) {
   return (
-    <div className="rounded-2xl bg-white ring-1 ring-gray-200 p-5">
+    <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
       <div className="flex items-start gap-4">
         <div
           className="h-8 w-8 flex items-center justify-center rounded-full text-white font-semibold shrink-0"
@@ -124,7 +128,7 @@ function Guideline({ num, title, items }) {
         </div>
         <div className="flex-1">
           <h2 className="text-lg font-semibold">{title}</h2>
-          <ul className="mt-2 list-disc list-inside space-y-1 text-gray-700">
+          <ul className="mt-2 list-disc list-inside space-y-1 text-gray-200">
             {items.map((t, i) => (
               <li key={i}>{t}</li>
             ))}

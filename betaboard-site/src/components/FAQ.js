@@ -15,7 +15,7 @@ const FAQS = [
   },
   {
     q: "Do I need to download TestFlight?",
-    a: "Yes. TestFlight is Apple’s official beta testing app, and it’s required to install iOS beta builds from builders on our platform. You can download it for free from the App Store. Once you join a beta, you’ll receive a TestFlight invite link that lets you install the build directly.",
+    a: "Some iOS betas require TestFlight — Apple’s official beta testing app — to install builds. If a beta needs it, you’ll be prompted to download TestFlight from the App Store for free, and invite links will open directly in the app on your phone so you can install the build with one tap.",
   },
   {
     q: "What kind of feedback should I submit?",
@@ -38,10 +38,10 @@ export default function FAQ() {
         <div className="text-center mb-10">
           <p className="text-sm text-gray-400 mb-2">Common questions</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold">
-            Frequently Asked{" "}
-            <span className="bg-gradient-to-r from-[#9AE6B4] via-[#60A5FA] to-[#C084FC] bg-clip-text text-transparent whitespace-nowrap">
-              Questions
-            </span>
+            <span className="bg-gradient-to-r from-[#9AE6B4] via-[#60A5FA] to-[#C084FC] bg-clip-text text-transparent">
+              Frequently Asked
+            </span>{" "}
+            <span className="text-white">Questions</span>
           </h2>
           <p className="mt-3 text-gray-300">
             Everything you need to know about betas, payouts, and feedback.

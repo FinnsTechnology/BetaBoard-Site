@@ -89,9 +89,6 @@ export default function Footer() {
 
         {/* Links */}
         <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-400">
-          <a href="/#howitworks" className="hover:text-white">
-            How It Works
-          </a>
           <a href="/#faq" className="hover:text-white">
             FAQ
           </a>

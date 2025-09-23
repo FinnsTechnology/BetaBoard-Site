@@ -1,5 +1,5 @@
 import React from "react";
-
+import { APPLE_LINK } from "../constants/Constants";
 export default function TopBanner() {
   return (
     <section className="relative overflow-hidden bg-[#0A0A0A] text-white">
@@ -94,10 +94,13 @@ export default function TopBanner() {
         {/* CTA */}
         <div className="mx-auto mb-6 flex w-full max-w-md flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="#get-started"
-            className="inline-flex items-center justify-center rounded-xl bg-[#DB4437] px-6 py-3 font-semibold text-white shadow-md transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0A0A0A] focus:ring-[#DB4437]"
+            href={APPLE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#DB4437] px-6 py-3 font-semibold text-white shadow-md transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0A0A0A] focus:ring-[#DB4437]"
           >
-            Download on the App Store
+            <span className="text-xl leading-none"></span>
+            <span>Download on the App Store</span>
           </a>
         </div>
 

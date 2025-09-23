@@ -96,7 +96,7 @@ export default function FAQ() {
         {/* Help CTA */}
         <div className="text-center mt-10">
           <a
-            href="#contact"
+            href="mailto:support@thebetaboard.com"
             className="inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium text-white transition hover:shadow"
             style={{ background: PRIMARY }}
           >

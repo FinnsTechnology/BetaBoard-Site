@@ -4,7 +4,7 @@ import { COLORS } from "../constants/Constants";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 import BetaBoardLogoWhite from "../assets/BetaBoardWhite.png";
-
+import { APPLE_LINK } from "../constants/Constants";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -46,13 +46,15 @@ export default function Header() {
           >
             Contact
           </a>
-          <Link
-            to="/#download"
+          <a
+            href={APPLE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center px-4 py-2 rounded-lg font-medium text-white transition hover:opacity-90"
             style={{ backgroundColor: COLORS.primary }}
           >
             Download BetaBoard
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -92,14 +94,16 @@ export default function Header() {
             >
               Contact
             </a>
-            <Link
-              to="/#download"
+            <a
+              href={APPLE_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               className="block px-4 py-2 rounded-lg text-white font-medium transition-transform transform hover:scale-105"
               style={{ backgroundColor: COLORS.primary }}
               onClick={() => setMenuOpen(false)}
             >
               Download BetaBoard
-            </Link>
+            </a>
           </motion.nav>
         )}
       </AnimatePresence>

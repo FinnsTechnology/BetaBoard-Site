@@ -4,8 +4,8 @@ import {
   BriefcaseIcon, // Builders
 } from "@heroicons/react/24/solid";
 
+import { APPLE_LINK } from "../constants/Constants";
 const BRAND_RED = "#DB4437";
-
 /** Animate container height to its content */
 function AutoHeight({ activeKey, children, className = "" }) {
   const ref = useRef(null);
@@ -139,7 +139,9 @@ export default function RoleInfoPanel() {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="#get-started"
+                href={APPLE_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium text-white shadow-sm transition hover:shadow"
                 style={{ background: BRAND_RED }}
               >

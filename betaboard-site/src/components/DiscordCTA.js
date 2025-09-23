@@ -62,7 +62,9 @@ export default function DiscordCTA() {
             {/* CTA */}
             <div className="w-full sm:w-auto">
               <a
-                href="https://discord.gg/your-invite-code" // replace with real invite
+                href="https://discord.gg/TvWhd5HG"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-medium text-white transition hover:shadow-lg"
                 style={{ background: DISCORD_COLOR }}
               >

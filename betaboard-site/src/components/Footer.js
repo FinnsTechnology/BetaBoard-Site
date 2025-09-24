@@ -1,30 +1,23 @@
 // src/components/Footer.jsx
 import { Link } from "react-router-dom";
-import BetaBoardLogo from "../assets/BetaBoardWhite.png";
+import BetaBoardLogo from "../assets/BetaBoardSVG.svg";
 
 const BRAND_RED = "#DB4437";
 
 export default function Footer() {
   return (
     <footer className="bg-[#0A0A0A] text-white py-14">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Top row */}
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-8">
           {/* Left: Logo */}
           <div className="flex items-start">
-            <Link
-              to="/"
-              className="flex items-center"
-              style={{ height: 46, overflow: "hidden" }}
-            >
+            <Link to="/" className="flex items-center h-11">
               <img
                 src={BetaBoardLogo}
                 alt="BetaBoard Logo"
-                style={{
-                  height: 60, // slightly larger than container for nice crop
-                  width: "auto",
-                  transform: "translateX(-13px)",
-                }}
+                style={{ height: "25px" }}
+                className="w-auto block"
               />
             </Link>
           </div>

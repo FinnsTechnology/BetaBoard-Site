@@ -4,15 +4,10 @@ import {
   Routes,
   Route,
   useLocation,
-  Link,
 } from "react-router-dom";
 import { useEffect } from "react";
 
 import Header from "./components/header";
-import FirstDetail from "./components/firstDetail";
-import SecondDetail from "./components/secondDetail";
-import ThirdDetail from "./components/thirdDetail";
-import HowItWorks from "./components/Howitworks";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Guidelines from "./components/guidelines";

@@ -3,32 +3,26 @@ import { Link } from "react-router-dom";
 import { COLORS } from "../constants/Constants";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
-import BetaBoardLogoWhite from "../assets/BetaBoardWhite.png";
+import BetaBoardLogo from "../assets/BetaBoardSVG.svg";
 import { APPLE_LINK } from "../constants/Constants";
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header
-      className="shadow-sm fixed w-full z-50 pt-5 pb-5"
+      className="shadow-sm fixed w-full z-50 pt-5 pb-5 px-4"
       style={{ backgroundColor: "#0A0A0A" }}
     >
       {/* Main Header */}
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6">
-        {/* Logo */}
-        <Link
-          to="/"
-          className="flex items-center"
-          style={{ height: 46, overflow: "hidden" }}
-        >
+      <div className="max-w-6xl mx-auto flex items-center justify-between ">
+        {/* Logo - positioned at the very left */}
+        <Link to="/" className="flex items-center h-11">
           <img
-            src={BetaBoardLogoWhite}
+            src={BetaBoardLogo}
             alt="BetaBoard Logo"
-            style={{
-              height: 60,
-              width: "auto",
-              transform: "translateX(-13px)",
-            }}
+            style={{ height: "35px" }}
+            className="w-auto block  "
           />
         </Link>
 

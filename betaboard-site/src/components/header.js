@@ -57,9 +57,9 @@ export default function Header() {
           className="sm:hidden text-white"
         >
           {menuOpen ? (
-            <XMarkIcon className="h-6 w-6" />
+            <XMarkIcon className="h-8 w-8" />
           ) : (
-            <Bars3Icon className="h-6 w-6" />
+            <Bars3Icon className="h-8 w-8" />
           )}
         </button>
       </div>

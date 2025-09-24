@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
 
         {/* Links */}
-        <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-400">
+        <div className="mt-10 flex flex-wrap gap-x-6 lg:ml-2 gap-y-3 text-sm text-gray-400">
           <a href="/#faq" className="hover:text-white">
             FAQ
           </a>
@@ -103,7 +103,7 @@ export default function Footer() {
         </div>
 
         {/* Divider + copyright */}
-        <div className="mt-8 border-t border-white/10 pt-6 text-sm text-gray-500">
+        <div className="mt-8 border-t border-white/10 pt-6 text-sm text-gray-500 lg:ml-2">
           © {new Date().getFullYear()} BetaBoard. All rights reserved.
         </div>
       </div>
